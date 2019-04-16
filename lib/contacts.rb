@@ -32,7 +32,8 @@ contacts = {
  contacts.each do |person, data|
    data.each do |attribute, value|
    if attribute == :favorite_icecream_flavors
-     value.delete_if do |flavor| flavor == "strawberry"
+     value do |flavor| flavor.include? "strawberry"
+      flavor.
   end
  end
  end
